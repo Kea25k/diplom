@@ -3,6 +3,9 @@ const ctx = canvasPlot.getContext('2d')
 ctx.fillRect(0,0,100,100);
 ctx.fillStyle='#0000ff';
 ctx.fillRect(100,100,200,200);
+ctx.fillStyle='#008000';
+ctx.fillRect(200,200,300,300);
+ctx.fillStyle='#800000';
 
 ctx.lineWidth="5";
 ctx.moveTo(300,300);
