@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <body>
 <input type="date" tabindex="1">
 Выбор даты
 <input type="time" tabindex="3">
-Выбор време"ни
+Выбор времени
 <input type="month" tabindex="2">
 Выбор месяца года
 <input type="week" tabindex="4">
-Выбор недели месяца
+Выбор недели месяца<br>
   
   
 <select name="icecream" size="7" multiple> 
-<optgroup label="Традиционные">
-<option selected="selected">>Молочное</option>
-<option disabled>Шоколадное</option>
+<optgroup label="Обучение">
+<option selected="selected">>Школа</option>
+<option >Лицей</option>
+  <option>Гимназия</option> 
 </optgroup>
-<optgroup label="Вкусы дня">
-<option>Cynep пpaлинe</option> 
-<option selected="selected">>Opexoвый сюрприз</option> 
-<option>Малиновое</option>
+<optgroup label="2 Образование">
+<option>Колледж</option> 
+  <option>Техникум</option> 
+  <option>Вуз</option> 
+<option selected="selected">>Университет</option> 
 </optgroup>
 </select>
   
@@ -44,8 +46,7 @@ list="edulevel" name="education">
   просто потрясающая! </textarea></label></p>
 <p><label>Официальная заявка на конкурс:<br>
   <em>Расскажите нам, за что вы любите эту группу. Пятеро победителей получат пропуск за кулисы!</em><br></label> 
-<textarea name="contest_entry" placeholder="150 words or
-less">
+<textarea name="contest_entry" placeholder="не более 150 слов">
 </textarea>
   </p>
   
@@ -55,10 +56,9 @@ less">
 
 <li><label>Включите меня в список paccылки<input type="radio" name="list" value="yes" checked="checked"></label></li>
 <li><label>Выключите меня в список paccылки<input type="radio" name="list" value="yes" checked="checked"></label></li>
-<li><label>Выключите меня в список paccылки<input type="radio" name="list1" value="yes" checked="checked"></label></li>
 
-  <li><label>Спасибо, не надо <input type="radion name="list” 
-value="no"> </label></li>
+
+  <li><label>Спасибо, не надо <input type="radio" name="list" value="yes" checked="checked"></label></li>
 </ul>
 </fieldset>
 
@@ -67,7 +67,7 @@ value="no"> </label></li>
  
   <label for="fio">NickName:</label>
   <hr>
-  <input type="text" name="fio" id="fio" placeholder="NickName" required accesskey="n"> »> <label>Parole<input type="password" name="pswd" maxlength="8" id="formpswd"/></label>
+  <input type="text" name="fio" id="fio" placeholder="NickName" required accesskey="n"> »> <label>Parole<input type="password" name="pswd" maxlength="8" id="formpswd"/></label><br>
   
   <label>Поле поиска<input type="search"></label>
   <label>Номер телефона<input type="tel"></label>
@@ -75,9 +75,9 @@ value="no"> </label></li>
   
   
  <ol> 
-<li><label>Полное имя: <input type="text" name="name" maxlength="5"></label></li>
+<li><label>Полное имя: <input type="text" name="name" maxlength="20"></label></li>
   <li><label for="email">Email:</label> 
-    <input type="text" name="email" id="email" readonly></li>
+    <input type="email" id="email" name="email" required></li>
 <li><label>Город: <input type="text" name="statenx"></label></li>
  
   <li><label>Age: <input type="number" name="cnumx" min="1" max="100"></label></li>
@@ -89,6 +89,11 @@ value="no"> </label></li>
   <li><label>Цвет: <input type="color" name="colorx"</label></li>
   </ol>
   <input type="date" namе="имя" valuе="2013-01-14">
-  <input type="submit"><input type="reset">
+    <input type="submit" value="Отправить">
+      <input type="reset" value="Сброс">
+
   </fieldset></р>
-  </body></html>
+   
+
+  </body>
+</html>
