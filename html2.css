@@ -1,14 +1,14 @@
 .form-wrap {
   width: 550px;
-  background: #ffd500;
+  background: 	#008B8B;
   border-radius: 20px;
 }
 .form-wrap *{transition: .1s linear}
 .profile {
-  width: 240px;
+  width: 239px;
   float: left;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 form {
   background: white;
@@ -39,13 +39,13 @@ h1:after {
   font-family: FontAwesome;
   position: absolute;
   top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 5%;
+  transform: translateX(-5%);
 }
 
 /********************** стилизация элементов формы **********************/
 label, span {
-  display: block;
+  display: circle;
   font-size: 14px;
   margin-bottom: 8px;
 }
@@ -54,8 +54,8 @@ input[type="text"], input[type="email"] {
   outline: none;
   margin: 0;
   width: 100%;
-  padding: 10px 15px;
-  background: #e6e6e6;
+  padding: 9px 15px;
+  background: #a9ebc7;
 }
 input[type="text"]:focus, input[type="email"]:focus {
   box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
@@ -78,7 +78,7 @@ input[type="text"]:focus, input[type="email"]:focus {
   left: 0;
   height: 40px;
   width: 40px;
-  background: #e6e6e6;
+  background: #a9ebc7;
   border-radius: 50%;
   text-align: center;
 }
@@ -105,7 +105,7 @@ select {
   padding: 10px 15px;
   outline: 0;
   border: 0;
-  background: #e6e6e6;
+  background: #a9ebc7;
   color: #7b7b7b;
   -webkit-appearance: none; /*убираем галочку в webkit-браузерах*/
   -moz-appearance: none; /*убираем галочку в Mozilla Firefox*/
@@ -128,11 +128,11 @@ button {
   padding: 10px 0;
   border-width: 0;
   display: block;
-  width: 120px;
+  width: 130px;
   margin: 25px auto 0;
-  background: #60e6c5;
+  background: #FF7F50;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
   text-transform: uppercase;
 }
