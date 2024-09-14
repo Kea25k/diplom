@@ -1,14 +1,106 @@
+
 <!DOCTYPE html>
-<HTML>
-  <body>
-      <a href="https://illustrators.ru/jobs">здесь публикуют вакансии и заказы для иллюстркаторов</a><pre>
-   <a href="https://www.kadrof.ru/work/cat10">удаленка для дизайнеров разной специальностей</a><pre>
-   <a href="https://render.ru/vacancy/vacancy.php"></a><pre>
-   <a href="html.html">помощь дизайнерам</a><pre>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #35424a;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+        
+        /* Адаптивная верстка */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
 
+    <div class="container">
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы предоставляем лучшие услуги в своей области. Наши специалисты — это профессионалы высшего уровня.</p>
+        </section>
 
+        <section id="services">
+            <h2>Услуги</h2>
+            <p>Мы предлагаем широкий спектр услуг, включая веб-дизайн, разработку и маркетинг.</p>
+        </section>
 
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами по электронной почте: contact@example.com</p>
+        </section>
+    </div>
 
-    
-  </body>
-</HTML>
+    <footer>
+        <p>&copy; 2023 Мой Сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
