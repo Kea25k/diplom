@@ -1,113 +1,118 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="html.css"> 
-</meta>
 <head>
-<link rel="stylesheet" href="html.css"> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-     <link rel="icon" href="dip4.jpg" height="24">
-<title>Диплом</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Диплом</title>
+ <img src="log2.png" 
+  <link rel="stylesheet" href="html.css">
 </head>
-  <body>
+<body>
+  <!-- Навигация -->
  <div class="rainbow-text">
     <span class="block-line"><span><span style="color:#ff0000">Д</span><span style="color:#ff1100">и</span><span style="color:#ff2200">п</span><span style="color:#ff3300">л</span><span style="color:#ff4400">о</span><span style="color:#ff5500">м</span><span style="color:#ff6600">н</span><span style="color:#ff7700">а</span><span style="color:#ff8800">я&nbsp;</span></span><span><span style="color:#ff9900">р</span><span style="color:#ffaa00">а</span><span style="color:#ffbb00">б</span><span style="color:#ffcc00">о</span><span style="color:#ffdd00">т</span><span style="color:#ffee00">а</span></span></span><br><span class="block-line">&nbsp;&nbsp;&nbsp;<span><span style="color:#ffff00">К</span><span style="color:#ffee00">а</span><span style="color:#ffdd00">р</span><span style="color:#ffcc00">п</span><span style="color:#ffbb00">е</span><span style="color:#ffaa00">н</span><span style="color:#ff9900">к</span><span style="color:#ff8800">о&nbsp;</span></span><span><span style="color:#ff7700">Е</span><span style="color:#ff6600">к</span><span style="color:#ff5500">а</span><span style="color:#ff4400">т</span><span style="color:#ff3300">е</span><span style="color:#ff2200">р</span><span style="color:#ff1100">и</span><span style="color:#ff0000">н</span><span style="color:#ff1100">ы&nbsp;</span></span><span style="color:#ff2200">1</span></span>
 </div>
-    <div class="animated-rainbow">Важная информация</div>
     <style>
       .rainbow-text {
     font-family: Courier New;
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    font-size: 49px;
+    font-size: 20px;
     text-shadow: #A3A3A3 1px 1px 0px;
 }
 .rainbow-text .block-line > span {
     display: inline-block;
 }
-      .animated-rainbow {
-    font-size: 42px;
-    font-family: Arial Black, Gadget, sans-serif;
-    background: linear-gradient(to left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
-    animation: rainbow-move-left-right 5s linear infinite alternate;
-    -webkit-background-clip: text;
-    background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
-@keyframes rainbow-move-left-right {
-    0% {background-position: 0 0    }
-    100% {background-position: -500px 0}
-}
-        </style>
- <img src="log2.png" 
-  width="800" height="400" alt="lorem"></a>
-    <a href="index2.html">Формы2</a>
-    <style>
-p {
-  line-height: 1.4;
-}
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Геройский раздел -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>Добро пожаловать в Дипломную работу!</h1>
+      <p>Мы создали её на основе своих знаний</p>
+<a href="https://nadip.ru/" class="button-style">Учебное завидение</a>
+    </div>
+  </section>
 
-a {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
-}
+  <!-- О нас -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Кто я такой?</h2>
+      <p>Я студент 3го курса Графического факультета.</p>
+    </div>
+  </section>
 
-a:link {
-  color: #FFA420;
-}
+  <!-- Умения -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Мы занимаемся</h2>
+      <div class="service-cards">
+        <div class="card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Разработкой веб-сайтов</h3>
+          <p> <a href="https://b24-xi0dfp.bitrix24site.ru/">Черновик сайта Битрикс24</a></p><br>
+           <p><a href="https://www.figma.com/design/Mxppbiipw7ESpE43VclY0I/Untitled?node-id=3-8&t=KbuhoKeKW2DS1qXg-1">Черновик Figma</a></p><br>
+           <p><a href="https://colab.research.google.com/?hl=ru">Сайт ознакомление с Web Дизайном</a></a></p><br>
+             <p><a href="https://htmlacademy.ru/courses/297/run/1">Академия по изучению HTML с нуля</a></p><br>
+            <p><a href="https://tilda.cc/">Сайт конструктор сайтов</a></p>
+        </div>
+        <div class="card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Графический факультет</h3>
+          <p>11-18 лет</p><br>
+          <p>-Графический дизайн в Photoshop</p><br>
+          <p>-3D-моделирование</p><br>
+          <p>-Дизайн сайтов</p><br>
+          <p>-Веб-приложения</p><br>
+          <p>-Web-мастеринг</p><br>
+          <p>-Фотокурс для школьников</p><br>
+        </div>
+            <div class="card">
+          <i class="fas fa-code"></i>
+          <h3>Полезные ссылки</h3>
+          <p><a href="https://html-css-js.com/">Сайт помощьник1</a></p><br>
+          <p><a href="https://www.w3schools.com/">Сайт помощьник2</a></p><br>
+          <p><a href="https://www.glideapps.com/">Сайт конструктор моб. приложений</a></p><br>
+          <p><a href="https://myneuralnetworks.ru/#info">Сайт,нейросеть, художник4</a></p><br>
+          <p><a href="https://github.com/">Сайт для создания сайтов</a></p><br>
+          <p><a href="https://undraw.co/">Cайт с векторными изображениями</a></p><br>
+          <p><a href="https://www.artlebedev.ru/typograf/">Типограф!</a></p><br>
+          <p><a href=" https://pythontutor.com/render.html#mode=display">Визуализатор кода</a></p><br>
+         <p><a href="amimation.html">Анимация!</a></p><br>
+          <p><a href="https://jsitor.com/">Проверка кода</a></p><br>
+          <p><a href="https://msiter.ru/references/html5-canvas/stroketext">Изучение JS</a></p><br>
+          <p><a href="https://onlinetestpad.com/5tkz73htzkmxg">Тест на знание HTML-CSS</a></p><br>
+          <p><a href="https://try2007.github.io/test/">Графика Python изучение</a></p><br>
+        </div>
+  </section>
 
-a:visited {
-  color: #FFAE42;
-}
+  <!-- Контактная информация -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Свяжитесь с нами</h2>
+      <form action="#" method="post">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваша почта" required>
+        <textarea rows="5" placeholder="Сообщение" required></textarea>
+        <button type="submit" class="btn-primary">Отправить</button>
+      </form>
+    </div>
+  </section>
 
-a:focus {
-  border-bottom: 1px solid;
-  background: #FFBD88;
-}
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 ЧудоНадип. Все права защищены.</p>
+    </div>
+  </footer>
 
-a:hover {
-  border-bottom: 1px solid;
-  background: #FEE5AC;
-}
-
-a:active {
-  background: #CC5500;
-  color: #FEE5AC;
-}
-    body {
-bgcolor: #ffb961;
-  }
-    </style>
-   <section id="content">
-            <h2>Полезные ссылки</h2>
-            <ol>
-              
-                    <li><a href="https://karpenko1.wordpress.com/%d0%b4%d0%b8%d0%bf%d0%bb%d0%be%d0%bc%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0/">Пример сайта из конструктора</a> </li>
-              <li><a href="https://kea25k.github.io/kontrol1/">Визитка ЧудоНадип</a></li>
-                           <li> <a href="https://b24-xi0dfp.bitrix24site.ru/">Черновик сайта Битрикс24</a><br>      </li>
-              <li><a href="https://www.figma.com/design/Mxppbiipw7ESpE43VclY0I/Untitled?node-id=3-8&t=KbuhoKeKW2DS1qXg-1">Черновик Figma</a>      </li>
-             <li> <a href="https://html-css-js.com/">Сайт помощьник1</a><br>      </li>
-   <li><a href="https://www.w3schools.com/">Сайт помощьник2</a><br>      </li>
-   <li><a href="https://www.glideapps.com/">Сайт конструктор моб. приложений</a><br>      </li>
-   <li><a href="https://myneuralnetworks.ru/#info">Сайт,нейросеть, художник4</a><br>      </li>
-   <li><a href="https://github.com/">Сайт для создания сайтов</a><br>      </li>
-   <li><a href="https://colab.research.google.com/?hl=ru">Сайт ознакомление с Web Дизайном</a><br>      </li>
-<li><a href="https://htmlacademy.ru/courses/297/run/1">Академия по изучению HTML с нуля</a><br>      </li>
-<li><a href="https://tilda.cc/">Сайт конструктор сайтов</a><br>      </li>
-<li><a href="https://undraw.co/">Cайт с векторными изображениями</a><br>      </li>
-<li><a href="https://www.artlebedev.ru/typograf/">Типограф!</a><br>      </li>
-<li><a href=" https://pythontutor.com/render.html#mode=display">Визуализатор кода</a><br>      </li>
-<li><a href="amimation.html">Анимация!</a><br>      </li>
-<li><a href="https://jsitor.com/">Проверка кода</a><br>      </li>
-           <li><a href="https://msiter.ru/references/html5-canvas/stroketext">Изучение JS</a>      </li>
-              <li><a href="https://onlinetestpad.com/5tkz73htzkmxg">Тест на знание HTML-CSS</a> </li>
-                         <li><a href="https://try2007.github.io/test/">Графика Python изучение</a>
-         
-            </ol>
-     
-        </section>
-
-  </body>
+  <!-- Подключение шрифтов и иконок -->
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+</body>
 </html>
