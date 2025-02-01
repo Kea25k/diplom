@@ -3,246 +3,300 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Диплом</title>
-	<link rel="stylesheet" href="html.css">
+	<title>Сложная таблица с вложенными таблицами</title>
 	<style>
 		body {
-			margin: 0;
-			padding: 0;
 			font-family: Arial, sans-serif;
+			margin: 20px;
 		}
 
-		header {
-			background-color: #f9f9f9;
-			padding: 10px 0;
+		h1 {
 			text-align: center;
 		}
 
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: #333;
-		}
-
-		nav li {
-			float: left;
-		}
-
-		nav a {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-		}
-
-		nav a:hover {
-			background-color: #111;
-		}
-
-		section {
-			padding: 50px 0;
-			text-align: center;
-		}
-
-		footer {
-			background-color: #222;
-			color: white;
-			text-align: center;
-			padding: 15px;
-		}
-
-		form input[type=text],
-		form textarea {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			box-sizing: border-box;
-		}
-
-		form button {
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			cursor: pointer;
-			width: 100%;
-		}
-
-		form button:hover {
-			background-color: #45a049;
-		}
-		body {
-		font-family: Arial, sans-serif;
-		}
-		
 		table {
-		border-collapse: collapse;
-		width: 100%;
-		margin-bottom: 20px;
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
 		}
-		
+
 		th,
 		td {
-		padding: 10px;
-		text-align: left;
-		border: 1px solid #ccc;
+			padding: 12px;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #ccc;
 		}
-		
-		.header-row {
-		background-color: #4CAF50;
-		color: white;
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+			font-weight: bold;
 		}
-		
-		.sub-header {
-		background-color: #45a049;
-		color: white;
+
+		tfoot th {
+			background-color: #ddd;
+			font-style: italic;
 		}
-		
+
+		caption {
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
 		.nested-table {
-		width: auto;
-		margin-left: 15px;
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			margin-top: 10px;
 		}
-		
+
 		.nested-table th,
 		.nested-table td {
-		padding: 5px;
+			padding: 6px;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #ccc;
+		}
+
+		.nested-table th {
+			background-color: #e0e0e0;
+			font-weight: bold;
 		}
 	</style>
 </head>
 
 <body>
-	<header>
-		<h1>Таблицы и диаграммы</h1>
-	</header>
 
-	</head>
-	
-	<body>
-		<table>
-			<thead>
-				<tr class="header-row">
-					<th colspan="3">Основные данные</th>
-					<th rowspan="2">Дополнительные данные</th>
-				</tr>
-				<tr class="sub-header">
-					<th>Имя</th>
-					<th>Фамилия</th>
-					<th>Возраст</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Иван</td>
-					<td>Иванов</td>
-					<td>25 лет</td>
-					<td>Некоторая информация</td>
-				</tr>
-				<tr>
-					<td>Петр</td>
-					<td>Петров</td>
-					<td>30 лет</td>
-					<td>Еще немного информации</td>
-				</tr>
-				<tr>
-					<td>Мария</td>
-					<td>Сидорова</td>
-					<td>28 лет</td>
-					<td>Дополнительная информация</td>
-				</tr>
-			</tbody>
-		</table>
-	
-		<h1>Пример сложной таблицы 2 с вложенными таблицами</h1>
-		<table>
-			<thead>
-				<tr class="header-row">
-					<th>Продукт</th>
-					<th>Характеристики</th>
-					<th>Стоимость</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Ноутбук</td>
-					<td>
-						<table class="nested-table">
-							<tr>
-								<th>Процессор</th>
-								<td>Intel Core i7</td>
-							</tr>
-							<tr>
-								<th>Оперативная память</th>
-								<td>16 ГБ</td>
-							</tr>
-							<tr>
-								<th>Накопитель</th>
-								<td>SSD 512 ГБ</td>
-							</tr>
-						</table>
-					</td>
-					<td>100 000 руб.</td>
-				</tr>
-				<tr>
-					<td>Смартфон</td>
-					<td>
-						<table class="nested-table">
-							<tr>
-								<th>Операционная система</th>
-								<td>Android 11</td>
-							</tr>
-							<tr>
-								<th>Память</th>
-								<td>128 ГБ</td>
-							</tr>
-							<tr>
-								<th>Камера</th>
-								<td>48 МП</td>
-							</tr>
-						</table>
-					</td>
-					<td>40 000 руб.</td>
-				</tr>
-			</tbody>
-		</table>
+	<h1>Пример сложной таблицы с вложенными таблицами</h1>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Адекватность и неадекватность</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-	</head>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Уменьшенная круговая диаграмма</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-</head>
+	<table>
+		<caption>Детализация заказов клиентов</caption>
+		<thead>
+			<tr>
+				<th>Клиент</th>
+				<th>Дата заказа</th>
+				<th>Сумма заказа</th>
+				<th>Подробности заказа</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Иван Иванов</td>
+				<td>01.01.2023</td>
+				<td>10 000 руб.</td>
+				<td>
+					<table class="nested-table">
+						<tr>
+							<th>Товар</th>
+							<th>Количество</th>
+							<th>Цена</th>
+						</tr>
+						<tr>
+							<td>Телефон X</td>
+							<td>1</td>
+							<td>7 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Наушники W</td>
+							<td>2</td>
+							<td>1 500 руб.</td>
+						</tr>
+						<tr>
+							<td>Смарт-часы Q</td>
+							<td>1</td>
+							<td>1 500 руб.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Петр Петров</td>
+				<td>15.02.2023</td>
+				<td>20 000 руб.</td>
+				<td>
+					<table class="nested-table">
+						<tr>
+							<th>Товар</th>
+							<th>Количество</th>
+							<th>Цена</th>
+						</tr>
+						<tr>
+							<td>Ноутбук Y</td>
+							<td>1</td>
+							<td>19 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Планшет Z</td>
+							<td>1</td>
+							<td>1 000 руб.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Мария Сидорова</td>
+				<td>05.03.2023</td>
+				<td>35 000 руб.</td>
+				<td>
+					<table class="nested-table">
+						<tr>
+							<th>Товар</th>
+							<th>Количество</th>
+							<th>Цена</th>
+						</tr>
+						<tr>
+							<td>Телефон X</td>
+							<td>2</td>
+							<td>14 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Наушники W</td>
+							<td>3</td>
+							<td>4 500 руб.</td>
+						</tr>
+						<tr>
+							<td>Смарт-часы Q</td>
+							<td>2</td>
+							<td>3 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Планшет Z</td>
+							<td>1</td>
+							<td>13 500 руб.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 
-
-<body>
-	<canvas id="myChart" width="50" height="50"></canvas>
-
-	<script>
-		const ctx = document.getElementById('myChart').getContext('2d'); const data = { labels: ['Сон', 'Бодрствование'], datasets: [{ label: 'Количество', data: [30, 70], backgroundColor: [ 'rgba(93, 186, 132, 0.6)', 'rgba(240, 169, 93, 1)' ], borderWidth: 0.5 }] }; new Chart(ctx, { type: 'doughnut', data: data, options: { responsive: true, plugins: { legend: { position: 'top' }, title: { display: true, text: 'Сон и бодрствование' } } } }); 
-	</script>
 </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Уменьшенная столбчатая диаграмма</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+	<title>Круговая диаграмма</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		canvas {
+			margin-top: 50px;
+		}
+
+		#tooltip {
+			position: absolute;
+			background-color: white;
+			border: 1px solid black;
+			padding: 10px;
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
-	<canvas id="myChart" width="100" height="100"></canvas>
+	<h1>Количество сна и бодрствования</h1>
+
+	<!-- Canvas для диаграммы -->
+	<canvas id="chart" width="500" height="500"></canvas>
+
+	<!-- Контейнер для всплывающих данных -->
+	<div id="tooltip"></div>
 
 	<script>
-		const ctx = document.getElementById('myChart').getContext('2d'); const data = { labels: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь'], datasets: [{ label: 'Продажи', data: [12, 19, 3, 17, 6, 14], backgroundColor: [ 'rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)', 'rgba(255, 159, 64, 0.6)' ] }] }; new Chart(ctx, { type: 'bar', data: data, options: { scales: { yAxes: [{ ticks: { beginAtZero: true } }] } } }); 
+		// Получаем контекст canvas
+        const ctx = document.getElementById('chart').getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+
+        // Данные для диаграммы
+        const data = [
+            { label: 'Сон', value: 8, color: '#6495ED' },
+            { label: 'Бодрствование', value: 16, color: '#FF6347' }
+        ];
+
+        // Функция для рисования круговой диаграммы
+        function drawChart(data) {
+            let total = data.reduce((acc, cur) => acc + cur.value, 0);
+            let startAngle = -Math.PI / 2;
+            let endAngle;
+            let xText, yText;
+            
+            for (let i = 0; i < data.length; i++) {
+                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
+                
+                ctx.beginPath();
+                ctx.moveTo(250, 250); // Центр круга
+                ctx.arc(250, 250, 175, startAngle, endAngle);
+                ctx.lineTo(250, 250);
+                ctx.fillStyle = data[i].color;
+                ctx.fill();
+
+                // Координаты для подписей
+                xText = 250 + Math.cos(startAngle + (endAngle - startAngle) / 2) * 210;
+                yText = 250 + Math.sin(startAngle + (endAngle - startAngle) / 2) * 210;
+
+                // Отображение подписей
+                ctx.font = '10x Arial';
+                ctx.textAlign = 'center';
+                ctx.fillStyle = '#000'; // Цвет текста
+                ctx.fillText(`${data[i].label}: ${(data[i].value / total * 100).toFixed(0)}%`, xText, yText);
+
+                startAngle = endAngle;
+            }
+        }
+
+        // Функция для обработки события mousemove
+        function onMouseMove(event) {
+            const rect = event.target.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Проверяем, находится ли курсор внутри одного из сегментов
+            const angle = Math.atan2(y - 250, x - 250);
+            let currentSegment = null;
+
+            let startAngle = -Math.PI / 2;
+            let endAngle;
+            let total = data.reduce((acc, cur) => acc + cur.value, 0);
+
+            for (let i = 0; i < data.length; i++) {
+                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
+
+                if (angle >= startAngle && angle < endAngle) {
+                    currentSegment = i;
+                    break;
+                }
+
+                startAngle = endAngle;
+            }
+
+            // Если найден сегмент, показываем всплывающее окно  //
+            if (currentSegment !== null) {
+                const segmentData = data[currentSegment];
+                const percent = (segmentData.value / total * 100).toFixed(0);
+
+                tooltip.style.display = 'block';
+                tooltip.innerHTML = `${segmentData.label}: ${percent}%`;
+                tooltip.style.left = `${event.pageX + 15}px`;
+                tooltip.style.top = `${event.pageY + 15}px`;
+            } else {
+                tooltip.style.display = 'none';
+            }
+        }
+
+        // Добавляем обработчик события mousemove
+        document.getElementById('chart').addEventListener('mousemove', onMouseMove);
+
+        // Вызываем функцию для рисования диаграммы
+        drawChart(data);
 	</script>
 </body>
 
