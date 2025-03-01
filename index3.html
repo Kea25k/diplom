@@ -1,5 +1,312 @@
  <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru">
 
-                   <a href="https://kea25k.github.io/diplom/">Домой</a>
+<head>
+	<meta charset="UTF-8">
+	<title>Диплом</title>
+  <link rel="stylesheet" href="html.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		th,
+		td {
+			padding: 12px;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #ccc;
+		}
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+			font-weight: bold;
+		}
+
+		tfoot th {
+			background-color: #ddd;
+			font-style: italic;
+		}
+
+		caption {
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		.nested-table {
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+			margin-top: 10px;
+		}
+
+		.nested-table th,
+		.nested-table td {
+			padding: 6px;
+			text-align: left;
+			vertical-align: top;
+			border: 1px solid #ccc;
+		}
+
+		.nested-table th {
+			background-color: #e0e0e0;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>Пример сложной таблицы с вложенными таблицами</h1>
+
+	<table>
+		<caption>Детализация заказов клиентов</caption>
+		<thead>
+			<tr>
+				<th>Клиент</th>
+				<th>Дата заказа</th>
+				<th>Сумма заказа</th>
+				<th>Подробности заказа</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Иван Иванов</td>
+				<td>01.01.2023</td>
+				<td>10 000 руб.</td>
+				<td>
+					<table class="nested-table">
+						<tr>
+							<th>Товар</th>
+							<th>Количество</th>
+							<th>Цена</th>
+						</tr>
+						<tr>
+							<td>Телефон X</td>
+							<td>1</td>
+							<td>7 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Наушники W</td>
+							<td>2</td>
+							<td>1 500 руб.</td>
+						</tr>
+						<tr>
+							<td>Смарт-часы Q</td>
+							<td>1</td>
+							<td>1 500 руб.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Петр Петров</td>
+				<td>15.02.2023</td>
+				<td>20 000 руб.</td>
+				<td>
+					<table class="nested-table">
+						<tr>
+							<th>Товар</th>
+							<th>Количество</th>
+							<th>Цена</th>
+						</tr>
+						<tr>
+							<td>Ноутбук Y</td>
+							<td>1</td>
+							<td>19 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Планшет Z</td>
+							<td>1</td>
+							<td>1 000 руб.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Мария Сидорова</td>
+				<td>05.03.2023</td>
+				<td>35 000 руб.</td>
+				<td>
+					<table class="nested-table">
+						<tr>
+							<th>Товар</th>
+							<th>Количество</th>
+							<th>Цена</th>
+						</tr>
+						<tr>
+							<td>Телефон X</td>
+							<td>2</td>
+							<td>14 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Наушники W</td>
+							<td>3</td>
+							<td>4 500 руб.</td>
+						</tr>
+						<tr>
+							<td>Смарт-часы Q</td>
+							<td>2</td>
+							<td>3 000 руб.</td>
+						</tr>
+						<tr>
+							<td>Планшет Z</td>
+							<td>1</td>
+							<td>13 500 руб.</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
 
 </html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Круговая диаграмма</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		canvas {
+			margin-top: 50px;
+		}
+
+		#tooltip {
+			position: absolute;
+			background-color: white;
+			border: 1px solid black;
+			padding: 10px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Количество сна и бодрствования</h1>
+
+	<!-- Canvas для диаграммы -->
+	<canvas id="chart" width="500" height="500"></canvas>
+
+	<!-- Контейнер для всплывающих данных -->
+	<div id="tooltip"></div>
+
+	<script>
+		// Получаем контекст canvas
+        const ctx = document.getElementById('chart').getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+
+        // Данные для диаграммы
+        const data = [
+            { label: 'Сон', value: 8, color: '#191970' },
+            { label: 'Бодрствование', value: 16, color: '#fa7100' }
+        ];
+
+        // Функция для рисования круговой диаграммы
+        function drawChart(data) {
+            let total = data.reduce((acc, cur) => acc + cur.value, 0);
+            let startAngle = -Math.PI / 2;
+            let endAngle;
+            let xText, yText;
+            
+            for (let i = 0; i < data.length; i++) {
+                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
+                
+                ctx.beginPath();
+                ctx.moveTo(250, 250); // Центр круга
+                ctx.arc(250, 250, 175, startAngle, endAngle);
+                ctx.lineTo(250, 250);
+                ctx.fillStyle = data[i].color;
+                ctx.fill();
+
+                // Координаты для подписей
+                xText = 250 + Math.cos(startAngle + (endAngle - startAngle) / 2) * 210;
+                yText = 250 + Math.sin(startAngle + (endAngle - startAngle) / 2) * 210;
+
+                // Отображение подписей
+                ctx.font = '10x Arial';
+                ctx.textAlign = 'center';
+                ctx.fillStyle = '#000'; // Цвет текста
+                ctx.fillText(`${data[i].label}: ${(data[i].value / total * 100).toFixed(0)}%`, xText, yText);
+
+                startAngle = endAngle;
+            }
+        }
+
+        // Функция для обработки события mousemove
+        function onMouseMove(event) {
+            const rect = event.target.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Проверяем, находится ли курсор внутри одного из сегментов
+            const angle = Math.atan2(y - 250, x - 250);
+            let currentSegment = null;
+
+            let startAngle = -Math.PI / 2;
+            let endAngle;
+            let total = data.reduce((acc, cur) => acc + cur.value, 0);
+
+            for (let i = 0; i < data.length; i++) {
+                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
+
+                if (angle >= startAngle && angle < endAngle) {
+                    currentSegment = i;
+                    break;
+                }
+
+                startAngle = endAngle;
+            }
+
+            // Если найден сегмент, показываем всплывающее окно  //
+            if (currentSegment !== null) {
+                const segmentData = data[currentSegment];
+                const percent = (segmentData.value / total * 100).toFixed(0);
+
+                tooltip.style.display = 'block';
+                tooltip.innerHTML = `${segmentData.label}: ${percent}%`;
+                tooltip.style.left = `${event.pageX + 15}px`;
+                tooltip.style.top = `${event.pageY + 15}px`;
+            } else {
+                tooltip.style.display = 'none';
+            }
+        }
+
+        // Добавляем обработчик события mousemove
+        document.getElementById('chart').addEventListener('mousemove', onMouseMove);
+
+        // Вызываем функцию для рисования диаграммы
+        drawChart(data);
+	</script>
+	 <div class="container">
+   <a href="index3.html" class="button-style">-Продолжить-</a>
+   <a href="https://kea25k.github.io/diplom/" class="button-style">Домой</a>
+  </div>
+</body>
+
+</html>
+              
+
+
