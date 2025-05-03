@@ -1,116 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Диплом</title>
-  <link rel="stylesheet" href="html.css">
-  <style> body { margin: 0; padding: 0; font-family: Arial, sans-serif; } header { background-color: #f9f9f9; padding: 10px 0; text-align: center; } nav ul { list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; } nav li { float: left; } nav a { display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; } nav a:hover { background-color: #111; } section { padding: 50px 0; text-align: center; } footer { background-color: #222; color: white; text-align: center; padding: 15px; } form input[type=text], form textarea { width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; } form button { background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; } form button:hover { background-color: #45a049; } </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Диплом</title>
+	<link rel="stylesheet" href="html.css">
 </head>
+
 <body>
-  <header>
-    <h1>Дипломная работа Карпенко Екатерины</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">О нас</a></li>
-      <li><a href="#services">Навыки</a></li>
-      <li><a href="#contact">Контакты</a></li>
-    </ul>
-  </nav>
-
-  <!-- Геройский раздел -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <h1>Добро пожаловать в Дипломную работу!</h1>
-      <p>Мы создали её на основе своих знаний</p>
-      <a href="https://nadip.ru/" class="button-style">Учебное заведение</a>
-    </div>
-  </section>
-
-  <!-- О нас -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Кто я такая?</h2>
-      <p>Я студентка 3-го курса Графического факультета.</p>
-    </div>
-  </section>
-
-  <!-- Умения -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Информация</h2>
-      <div class="service-cards">
-        <div class="card">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Разработка веб-сайтов</h3>
-          <p><a href="http://diplomkea.wordpress.com">Шаблон WordPress</a></p>
-          <p><a href="https://b24-xi0dfp.bitrix24site.ru/">Черновик сайта Битрикс24</a></p>
-          <p><a href="https://www.figma.com/design/Mxppbiipw7ESpE43VclY0I/Untitled?node-id=3-8&t=KbuhoKeKW2DS1qXg-1">Черновик Figma</a></p>
-          <p><a href="https://colab.research.google.com/?hl=ru">Ознакомление с Web Дизайном</a></p>
-          <p><a href="https://htmlacademy.ru/courses/297/run/1">Академия по изучению HTML с нуля</a></p>
-          <p><a href="https://tilda.cc/">Конструктор сайтов Tilda</a></p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Графический факультет</h3>
-          <p>11-18 лет</p>
-          <p>- Графический дизайн в Photoshop</p>
-          <p>- 3D-моделирование</p>
-          <p>- Дизайн сайтов</p>
-          <p>- Веб-приложения</p>
-          <p>- Web-мастеринг</p>
-          <p>- Фотокурс для школьников</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-code"></i>
-          <h3>Полезные ссылки</h3>
-          <p><a href="https://html-css-js.com/">Помощьник 1</a></p>
-          <p><a href="https://www.w3schools.com/">Помощьник 2</a></p>
-          <p><a href="https://www.glideapps.com/">Конструктор мобильных приложений</a></p>
-          <p><a href="https://myneuralnetworks.ru/#info">Нейросеть-художник</a></p>
-          <p><a href="https://github.com/">Платформа для разработки</a></p>
-          <p><a href="https://undraw.co/">Векторные изображения</a></p>
-          <p><a href="https://www.artlebedev.ru/typograf/">Типограф</a></p>
-          <p><a href="https://pythontutor.com/render.html#mode=display">Визуализатор кода</a></p>
-          <p><a href="animation.html">Анимации</a></p>
-          <p><a href="https://jsitor.com/">Проверка кода</a></p>
-          <p><a href="https://msiter.ru/references/html5-canvas/stroketext">Изучение JavaScript</a></p>
-          <p><a href="https://onlinetestpad.com/5tkz73htzkmxg">Тест на знание HTML-CSS</a></p>
-          <p><a href="https://try2007.github.io/test/">Графика Python</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Контактная информация -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Свяжитесь с нами</h2>
-      <form action="#" method="post">
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="email" placeholder="Ваша почта" required>
-        <textarea rows="5" placeholder="Сообщение" required></textarea>
-        <button type="submit" class="btn-primary">Отправить</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Кнопка Продолжить -->
-   <div class="container">
-   <a href="index2.html" class="button-style">-Продолжить-</a>
-  </div>
-
-  <!-- Футер -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 ЧудоНадип. Все права защищены.</p>
-    </div>
-  </footer>
-
-  <!-- Подключение шрифтов и иконок -->
-  <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
-</body>
-</html>
-
+	<header>
+		<div class="header-content">
+			<div class="star"></div>
+			<div class="diploma-info">
+				<h1><b>ДИПЛОМНАЯ РАБОТА</b></h1>
+				<p><b>КАРПЕНКО ЕКАТЕРИНЫ</b></p>
+			</div>
+	</header>
+	<section class="hero">
+		<div class="hero-content">
+			<h1>Добро пожаловать в Дипломную работу!</h1>
+			<p>Мы создали её на основе своих знаний</p>
+			<a href="https://nadip.ru/" class="button">Учебное заведение</a>
+		</div>
+	</section>
+	<section class="about">
+		<h2>В этом проекте мы разберём</h2>
+    
+		<div class="about-container">
+			<div class="about-item design1">
+				<p><b>Стандартизированный язык гипертекстовой разметки документов</b></p>
+			</div>
+			<div class="about-item html">
+				<h3>HTML</h3>
+			</div>
+			<div class="about-item css">
+				<h3>CSS</h3>
+			</div>
+			<div class="about-item design2">
+				<p><b>Формальный язык декорирования и описания внешнего вида документа</b></p>
+			</div>
+		</div>
+	</section>
+ 
