@@ -1,312 +1,478 @@
- <!DOCTYPE html>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Диплом</title>
-  <link rel="stylesheet" href="html.css">
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 20px;
-		}
-
-		h1 {
-			text-align: center;
-		}
-
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			border-spacing: 0;
-		}
-
-		th,
-		td {
-			padding: 12px;
-			text-align: left;
-			vertical-align: top;
-			border: 1px solid #ccc;
-		}
-
-		th {
-			background-color: #4CAF50;
-			color: white;
-			font-weight: bold;
-		}
-
-		tfoot th {
-			background-color: #ddd;
-			font-style: italic;
-		}
-
-		caption {
-			font-size: 18px;
-			font-weight: bold;
-			margin-top: 10px;
-		}
-
-		.nested-table {
-			width: 100%;
-			border-collapse: collapse;
-			border-spacing: 0;
-			margin-top: 10px;
-		}
-
-		.nested-table th,
-		.nested-table td {
-			padding: 6px;
-			text-align: left;
-			vertical-align: top;
-			border: 1px solid #ccc;
-		}
-
-		.nested-table th {
-			background-color: #e0e0e0;
-			font-weight: bold;
-		}
-	</style>
-</head>
-
-<body>
-
-	<h1>Пример сложной таблицы с вложенными таблицами</h1>
-
-	<table>
-		<caption>Детализация заказов клиентов</caption>
-		<thead>
-			<tr>
-				<th>Клиент</th>
-				<th>Дата заказа</th>
-				<th>Сумма заказа</th>
-				<th>Подробности заказа</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Иван Иванов</td>
-				<td>01.01.2023</td>
-				<td>10 000 руб.</td>
-				<td>
-					<table class="nested-table">
-						<tr>
-							<th>Товар</th>
-							<th>Количество</th>
-							<th>Цена</th>
-						</tr>
-						<tr>
-							<td>Телефон X</td>
-							<td>1</td>
-							<td>7 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Наушники W</td>
-							<td>2</td>
-							<td>1 500 руб.</td>
-						</tr>
-						<tr>
-							<td>Смарт-часы Q</td>
-							<td>1</td>
-							<td>1 500 руб.</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<tr>
-				<td>Петр Петров</td>
-				<td>15.02.2023</td>
-				<td>20 000 руб.</td>
-				<td>
-					<table class="nested-table">
-						<tr>
-							<th>Товар</th>
-							<th>Количество</th>
-							<th>Цена</th>
-						</tr>
-						<tr>
-							<td>Ноутбук Y</td>
-							<td>1</td>
-							<td>19 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Планшет Z</td>
-							<td>1</td>
-							<td>1 000 руб.</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<tr>
-				<td>Мария Сидорова</td>
-				<td>05.03.2023</td>
-				<td>35 000 руб.</td>
-				<td>
-					<table class="nested-table">
-						<tr>
-							<th>Товар</th>
-							<th>Количество</th>
-							<th>Цена</th>
-						</tr>
-						<tr>
-							<td>Телефон X</td>
-							<td>2</td>
-							<td>14 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Наушники W</td>
-							<td>3</td>
-							<td>4 500 руб.</td>
-						</tr>
-						<tr>
-							<td>Смарт-часы Q</td>
-							<td>2</td>
-							<td>3 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Планшет Z</td>
-							<td>1</td>
-							<td>13 500 руб.</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<title>Страница форма с несколькими шагами заполнения</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Круговая диаграмма</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-		}
+	<link rel="stylesheet" href="https://bootstraptema.ru/snippets/form/2022/form-page/bootstrap.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="https://bootstraptema.ru/snippets/form/2022/form-page/animate.min.css">
+	<link rel="stylesheet" href="https://bootstraptema.ru/snippets/form/2022/form-page/fontawesome-all.css">
+	<link rel="stylesheet" href="https://bootstraptema.ru/snippets/form/2022/form-page/style.css">
 
-		canvas {
-			margin-top: 50px;
-		}
-
-		#tooltip {
-			position: absolute;
-			background-color: white;
-			border: 1px solid black;
-			padding: 10px;
-			display: none;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="https://bootstraptema.ru/snippets/form/2022/form-page/switch.css">
+	<!-- Color Alternatives -->
+	<link href="https://bootstraptema.ru/snippets/form/2022/form-page/color-2.css" rel="alternate stylesheet"
+		type="text/css" title="color-2">
+	<link href="https://bootstraptema.ru/snippets/form/2022/form-page/color-3.css" rel="alternate stylesheet"
+		type="text/css" title="color-3">
+	<link href="https://bootstraptema.ru/snippets/form/2022/form-page/color-4.css" rel="alternate stylesheet"
+		type="text/css" title="color-4">
+	<link href="https://bootstraptema.ru/snippets/form/2022/form-page/color-5.css" rel="alternate stylesheet"
+		type="text/css" title="color-5">
 </head>
 
 <body>
-	<h1>Количество сна и бодрствования</h1>
 
-	<!-- Canvas для диаграммы -->
-	<canvas id="chart" width="500" height="500"></canvas>
+	<!-- This code is use for color chooser, you can delete -->
+	<div id="switch-color" class="color-switcher">
+		<div class="open"><i class="fas fa-cog"></i></div>
+		<h4>ВАРИАНТ ЦВЕТА</h4>
+		<ul>
+			<li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;"
+					href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;"
+					href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;"
+					href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;"
+					href="#"><i class="fas fa-cog"></i></a> </li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
 
-	<!-- Контейнер для всплывающих данных -->
-	<div id="tooltip"></div>
 
-	<script>
-		// Получаем контекст canvas
-        const ctx = document.getElementById('chart').getContext('2d');
-        const tooltip = document.getElementById('tooltip');
+	<div class="wrapper">
+		<div class="steps-area steps-area-fixed">
+			<div class="image-holder">
+				<img src=".jpg" alt="">
+ </div>
+				<div class="steps clearfix">
+					<ul class="tablist multisteps-form__progress">
+						<li class="multisteps-form__progress-btn js-active current">
+							<span>1</span>
+						</li>
+						<li class="multisteps-form__progress-btn">
+							<span>2</span>
+						</li>
+						<li class="multisteps-form__progress-btn">
+							<span>3</span>
+						</li>
+						<li class="multisteps-form__progress-btn">
+							<span>4</span>
+						</li>
+						<li class="multisteps-form__progress-btn last">
+							<span>5</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<form class="multisteps-form__form" action="#" id="wizard" method="POST">
+				<div class="form-area position-relative">
+					<!-- div 1 -->
+					<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+						<div class="wizard-forms">
+							<div class="inner pb-100 clearfix">
+								<div class="form-content pera-content">
+									<div class="step-inner-content">
+										<span class="step-no">Шаг 1</span>
+										<h2>Какие услуги Вам нужны?</h2>
+										<p>Пожалуйста, выберите из списка ниже те услуги, которые вам наиболее
+											интересны. Это поможет нам лучше понять ваши
+											потребности и предложить оптимальные решения.</p>
+										<div class="step-box">
+											<div class="row">
+												<div class="col-md-4">
+													<label class="step-box-content bg-white text-center relative-position active">
+ <span class="step-box-icon">
+ <img src="https://bootstraptema.ru/snippets/form/2022/form-page/d1.png" alt="">
+ </span>
+ <span class="step-box-text">
+ Корпоративные услуги
+ </span>
+ <span class="service-check-option">
+ <span><input type="radio" name="service_name" value="Corporate Services" checked></span>
+ </span>
+ </label>
+												</div>
+												<div class="col-md-4">
+													<label class="step-box-content bg-white text-center relative-position">
+ <span class="step-box-icon">
+ <img src="https://bootstraptema.ru/snippets/form/2022/form-page/d2.png" alt="">
+ </span>
+ <span class="step-box-text">
+ Услуги фрилансера
+ </span>
+ <span>условные</span>
+ <span class="service-check-option">
+ <span><input id="condition1" type="radio" name="service_name" value="Freelancing Services"></span>
+ </span>
+ </label>
+												</div>
+												<div class="col-md-4">
+													<label class="step-box-content bg-white text-center relative-position">
+ <span class="step-box-icon">
+ <img src="https://bootstraptema.ru/snippets/form/2022/form-page/d3.png" alt="">
+ </span>
+ <span class="step-box-text">
+ Веб-разработка
+ </span>
+ <span class="service-check-option">
+ <span><input type="radio" name="service_name" value="Development Services"></span>
+ </span>
+ </label>
+												</div>
+											</div>
+											<div class="row conditional"
+												data-condition="#condition1 && service_name == 'Freelancing Services'">
+												<div class="col-md-12 form-inner-area">
+													<label for="field"><h3>В каком секторе</h3></label>
+													<input type="text" name="field" class="form-control" minlength="2" placeholder="Укажите в этом поле">
+ </div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /.inner -->
+								<div class="actions">
+									<ul>
+										<li class="disable" aria-disabled="true">
+											<span class="js-btn-next" title="NEXT">Назад <i class="fa fa-arrow-right"></i></span>
+										</li>
+										<li><span class="js-btn-next" title="NEXT">ДАЛЕЕ <i class="fa fa-arrow-right"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- div 2 -->
+						<div class="multisteps-form__panel" data-animation="slideHorz">
+							<div class="wizard-forms">
+								<div class="inner pb-100 clearfix">
+									<div class="form-content pera-content">
+										<div class="step-inner-content">
+											<span class="step-no bottom-line">Шаг 2</span>
+											<div class="step-progress float-right">
+												<span>2 из 5 завершено</span>
+												<div class="step-progress-bar">
+													<div class="progress">
+														<div class="progress-bar"></div>
+													</div>
+												</div>
+											</div>
 
-        // Данные для диаграммы
-        const data = [
-            { label: 'Сон', value: 8, color: '#191970' },
-            { label: 'Бодрствование', value: 16, color: '#fa7100' }
-        ];
+											<h2>Укажите ваши данные для регистрации</h2>
+											<p></p>
 
-        // Функция для рисования круговой диаграммы
-        function drawChart(data) {
-            let total = data.reduce((acc, cur) => acc + cur.value, 0);
-            let startAngle = -Math.PI / 2;
-            let endAngle;
-            let xText, yText;
-            
-            for (let i = 0; i < data.length; i++) {
-                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
-                
-                ctx.beginPath();
-                ctx.moveTo(250, 250); // Центр круга
-                ctx.arc(250, 250, 175, startAngle, endAngle);
-                ctx.lineTo(250, 250);
-                ctx.fillStyle = data[i].color;
-                ctx.fill();
+											<div class="form-inner-area">
+												<input type="text" name="full_name" class="form-control required" minlength="2" placeholder="Имя и фамилия *" required>
+												<input type="email" name="email" class="form-control required" placeholder="Email Адрес *" required>
+												<input type="text" name="phone" placeholder="Номер телефона">
+ </div>
+												<div class="gender-selection">
+													<h3>Пол</h3>
+													<label>
+ <input type="radio" name="gender" value="Male">
+ <span class="checkmark"></span>Мужской
+ </label>
+													<label>
+ <input type="radio" name="gender" value="Female">
+ <span class="checkmark"></span>Женский
+ </label>
 
-                // Координаты для подписей
-                xText = 250 + Math.cos(startAngle + (endAngle - startAngle) / 2) * 210;
-                yText = 250 + Math.sin(startAngle + (endAngle - startAngle) / 2) * 210;
+													<label>
+	 <input type="radio" name="gender" value="Not info">
+	 <span class="checkmark"></span>Не указано
+	 </label>
+												</div>
+												<div class="upload-documents">
+													<h3>Загрузите документы:</h3>
+													<div class="upload-araa bg-white">
+														<input type="hidden" value="" name="fileContent" id="fileContent">
+														<input type="hidden" value="" name="filename" id="filename">
+														<div class="upload-icon float-left">
+															<i class="fas fa-cloud-upload-alt"></i>
+														</div>
+														<div class="upload-text">
+															<span>( Принимаемый файл: pdf. doc/ docx -
+															Максимальный размер файла: 150 Кб для демонстрации )</span>
+														</div>
+														<div class="upload-option text-center">
+															<label for="attach">Загрузить документы</label>
+															<input id="attach" style="visibility:hidden;" type="file">
+ </div>
+														</div>
+													</div>
 
-                // Отображение подписей
-                ctx.font = '10x Arial';
-                ctx.textAlign = 'center';
-                ctx.fillStyle = '#000'; // Цвет текста
-                ctx.fillText(`${data[i].label}: ${(data[i].value / total * 100).toFixed(0)}%`, xText, yText);
+												</div>
+											</div>
+										</div>
+										<!-- /.inner -->
+										<div class="actions">
+											<ul>
+												<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> НАЗАД </span>
+												</li>
+												<li><span class="js-btn-next" title="NEXT">ДАЛЕЕ<i class="fa fa-arrow-right"></i></span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- div 3 -->
+								<div class="multisteps-form__panel" data-animation="slideHorz">
+									<div class="wizard-forms">
+										<div class="inner pb-100 clearfix">
+											<div class="form-content pera-content">
+												<div class="step-inner-content">
+													<span class="step-no bottom-line">Шаг 3</span>
+												<div class="step-progress float-right">
+														  <span>3 из 5 завершено</span>
+														   <div class="step-progress-bar">
+															   <div class="progress">
+																<div class="progress-bar" style="width:40%"></div>
+															</div>
+														</div>
+													</div>
+													<h2>Какие услуги Вам нужны?</h2>
+													<p></p>
+													<div class="services-select-option">
+														<ul>
+															<li class="bg-white active">
+																<label>Веб-дизайн <input type="radio" id="condition2" name="web_service" value="Web Design" checked></label>
+															</li>
+															<li class="bg-white">
+																<label>Веб-разработка <input type="radio" name="web_service" value="Web Development"></label>
+															</li>
+															<li class="bg-white">
+																<label>Графический дизайн <input type="radio" name="web_service" value="Graphics Design"></label>
+															</li>
+															<li class="bg-white">
+																<label>SEO <input type="radio" name="web_service" value="SEO"></label>
+															</li>
 
-                startAngle = endAngle;
-            }
-        }
+														</ul>
+													</div>
+													<div class="conditional"
+														data-condition="#condition2 && web_service == 'Web Design'">
+														<div class="form-inner-area">
+															<label> <h3>Подробности</h3></label>
+															<input type="text" name="web_service_detail">
+ </div>
+														</div>
+														<div class="language-select">
+															<p>Я хочу просматривать проекты на следующих языках:
+															</p>
+															<select name="languages">
+ <option>English</option>
+ <option>Russian</option>
+ <option>Arabic</option>
+ <option>Spanish</option>
+ <option>French</option>
+ <option>Chinese</option>
+<option>Korean</option>
+ </select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- ./inner -->
+											<div class="actions">
+												<ul>
+													<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK </span>
+														</li>
+														<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span>
+														</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- div 4 -->
+											<div class="multisteps-form__panel" data-animation="slideHorz">
+												<div class="wizard-forms">
+													<div class="inner pb-100 clearfix">
+														<div class="form-content pera-content">
+															<div class="step-inner-content">
+																<span class="step-no bottom-line">Step 4</span>
+																<div class="step-progress float-right">
+																	<span>4 из 5 завершено</span>
+																	<div class="step-progress-bar">
+																		<div class="progress">
+																			<div class="progress-bar" style="width:70%">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<h2>Форма для оценки проекта</h2>
+																<p></p>
+																<div class="step-content-area">
+																	<div class="budget-area">
+																		<p><i class="fas fa-dollar-sign"></i> Бюджет</p>
+																		<select name="budget">
+ <option>$200 - $390</option>
+ <option>$390 - $590</option>
+ <option>$590 - $790</option>
+ <option>$790 - $990</option>
+ <option>$990 - $1500</option>
+ </select>
+																	</div>
+																	<div class="budget-area">
+																		<p><i class="fas fa-comments"></i>Необходимая
+																			поддержка</p>
+																		<select name="support_period">
+ <option>от 2 до 6 месяцев</option>
+ <option>от 6 до 9 месяцев</option>
+ <option>от 9 до 12 месяцев</option>
+ <option>от 12 до 18 месяцев</option>
+ <option>от 18 до 24 месяцев</option>
+ </select>
+																	</div>
+																	<div class="budget-area">
+																		<p>Оптимизация и доступность</p>
+																		<div class="opti-list">
+																			<ul class="d-flex">
+																				<li class="bg-white active">
+																					<input type="checkbox" name="code_opti1" value="Semantic coding" checked>Семантическое кодирование</li>
+																				<li class="bg-white">
+																					<input type="checkbox" name="code_opti2" value="Mobile APP">Мобильное ПРИЛОЖЕНИЕ</li>
+																				<li class="bg-white">
+																					<input type="checkbox" name="code_opti3" value="Mobile Design">Мобильный дизайн</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /.inner -->
+													<div class="actions">
+														<ul>
+															<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> НАЗАД </span>
+															</li>
+															<li><span class="js-btn-next" title="NEXT">ДАЛЕЕ <i class="fa fa-arrow-right"></i></span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- div 5 -->
+											<div class="multisteps-form__panel" data-animation="slideHorz">
+												<div class="wizard-forms">
+													<div class="inner pb-100 clearfix">
+														<div class="form-content pera-content">
+															<div class="step-inner-content">
+																<span class="step-no bottom-line">Шаг 5</span>
+																<div class="step-progress float-right">
+																	<span>5 из 5 завершено</span>
+																	<div class="step-progress-bar">
+																		<div class="progress">
+																			<div class="progress-bar"
+																				style="width:100%"></div>
+																		</div>
+																	</div>
+																</div>
+																<h2>Выполните Заключительный Шаг</h2>
+																<p></p>
+																<div class="step-content-field">
+																	<div class="date-picker date datepicker">
+																		<input type="text" name="date" class="form-control">
+																		<div class="input-group-append">
+																			<span>Добавить Время</span>
+																		</div>
+																	</div>
+																	<div class="plan-area">
+																		<div class="plan-icon-text text-center active">
+																			<div class="plan-icon">
+																				<i class="fas fa-chess-queen"></i>
+																			</div>
+																			<div class="plan-text">
+																				<h3>Неограниченный тарифный план</h3>
+																				<p>Идеально подходит для профессионалов
+																					и команд, которым необходим полный
+																					контроль и неограниченные
+																					возможности для
+																					реализации всех своих идей без
+																					ограничений.</p>
+																				<input type="radio" name="your_plan" value="Unlimited Plan" checked="">
+ </div>
+																			</div>
+																			<div class="plan-icon-text text-center">
+																				<div class="plan-icon">
+																					<i class="fas fa-cubes"></i>
+																				</div>
+																				<div class="plan-text">
+																					<h3>Ограниченный тарифный план</h3>
+																					<p>Оптимальный выбор для начинающих
+																						и тех, кто хочет эффективно
+																						управлять несколькими проектами
+																						с контролем затрат и
+																						четкими рамками.</p>
+																					<input type="radio" name="your_plan" value="Unlimited Plan">
+ </div>
+																				</div>
+																			</div>
+																			<div class="budget-area">
+																				<div class="opti-list">
+																					<ul class="d-flex">
+																						<li class="bg-white active">
+																							<input type="checkbox" name="code_opti1" value="Semantic coding" checked>Мобильное ПРИЛОЖЕНИЕ</li>
+																						<li class="bg-white">
+																							<input type="checkbox" name="code_opti2" value="Mobile APP">Мобильное ПРИЛОЖЕНИЕ</li>
+																						<li class="bg-white">
+																							<input type="checkbox" name="code_opti3" value="Mobile Design">Мобильный дизайн</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- /.inner -->
+															<div class="actions">
+																<ul>
+																	<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> НАЗАД </span>
+																	</li>
+																	<li><button type="submit" title="NEXT">SUBMIT <i class="fa fa-arrow-right"></i></button>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+			</form>
+		</div>
+		<script src="https://bootstraptema.ru/snippets/form/2022/form-page/jquery-3.3.1.min.js"></script>
+		<script src="https://bootstraptema.ru/snippets/form/2022/form-page/jquery.validate.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+		</script>
+		<script src="https://bootstraptema.ru/snippets/form/2022/form-page/bootstrap.min.js"></script>
+		<script src="https://bootstraptema.ru/snippets/form/2022/form-page/conditionize.flexible.jquery.min.js">
+		</script>
+		<script src="https://bootstraptema.ru/snippets/form/2022/form-page/main.js"></script>
+		<script src="https://bootstraptema.ru/snippets/form/2022/form-page/switch.js"></script>
+		<script>
+			$("#files").change(function() {
+ filename = this.files[0].name
+ // console.log(filename);
+ });
 
-        // Функция для обработки события mousemove
-        function onMouseMove(event) {
-            const rect = event.target.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
+ function UploadFile() {
+ var reader = new FileReader();
+ var file = document.getElementById('attach').files[0];
+ reader.onload = function() {
+ document.getElementById('fileContent').value = reader.result;
+ document.getElementById('filename').value = file.name;
+ document.getElementById('wizard').submit();
+ }
+ reader.readAsDataURL(file);
+ }
 
-            // Проверяем, находится ли курсор внутри одного из сегментов
-            const angle = Math.atan2(y - 250, x - 250);
-            let currentSegment = null;
-
-            let startAngle = -Math.PI / 2;
-            let endAngle;
-            let total = data.reduce((acc, cur) => acc + cur.value, 0);
-
-            for (let i = 0; i < data.length; i++) {
-                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
-
-                if (angle >= startAngle && angle < endAngle) {
-                    currentSegment = i;
-                    break;
-                }
-
-                startAngle = endAngle;
-            }
-
-            // Если найден сегмент, показываем всплывающее окно  //
-            if (currentSegment !== null) {
-                const segmentData = data[currentSegment];
-                const percent = (segmentData.value / total * 100).toFixed(0);
-
-                tooltip.style.display = 'block';
-                tooltip.innerHTML = `${segmentData.label}: ${percent}%`;
-                tooltip.style.left = `${event.pageX + 15}px`;
-                tooltip.style.top = `${event.pageY + 15}px`;
-            } else {
-                tooltip.style.display = 'none';
-            }
-        }
-
-        // Добавляем обработчик события mousemove
-        document.getElementById('chart').addEventListener('mousemove', onMouseMove);
-
-        // Вызываем функцию для рисования диаграммы
-        drawChart(data);
-	</script>
-	 <div class="container">
-   <a href="index3.html" class="button-style">-Продолжить-</a>
-   <a href="https://kea25k.github.io/diplom/" class="button-style">Домой</a>
-  </div>
+ $(document).ready(function() {
+ $('.conditional').conditionize();
+ });
+		</script>
 </body>
 
 </html>
-              
-
-
