@@ -3,245 +3,179 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Диплом</title>
-  <link rel="stylesheet" href="html2.css">
+	<link rel="stylesheet" href="html.css">
 	<link rel="icon" href="dip4.jpg" type="image/jpg">
 </head>
 
 <body>
+	<header>
+		<div class="header-content">
+			<div class="star"></div>
+			<div class="diploma-info">
+				<h1><b>ДИПЛОМНАЯ РАБОТА</b></h1>
+				<p><b>КАРПЕНКО ЕКАТЕРИНЫ</b></p>
+			</div>
+	</header>
 
-	<h1>Пример сложной таблицы с вложенными таблицами</h1>
 
-	<table>
-		<caption>Детализация заказов клиентов</caption>
-		<thead>
-			<tr>
-				<th>Клиент</th>
-				<th>Дата заказа</th>
-				<th>Сумма заказа</th>
-				<th>Подробности заказа</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Иван Иванов</td>
-				<td>01.01.2023</td>
-				<td>10 000 руб.</td>
-				<td>
-					<table class="nested-table">
-						<tr>
-							<th>Товар</th>
-							<th>Количество</th>
-							<th>Цена</th>
-						</tr>
-						<tr>
-							<td>Телефон X</td>
-							<td>1</td>
-							<td>7 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Наушники W</td>
-							<td>2</td>
-							<td>1 500 руб.</td>
-						</tr>
-						<tr>
-							<td>Смарт-часы Q</td>
-							<td>1</td>
-							<td>1 500 руб.</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<tr>
-				<td>Петр Петров</td>
-				<td>15.02.2023</td>
-				<td>20 000 руб.</td>
-				<td>
-					<table class="nested-table">
-						<tr>
-							<th>Товар</th>
-							<th>Количество</th>
-							<th>Цена</th>
-						</tr>
-						<tr>
-							<td>Ноутбук Y</td>
-							<td>1</td>
-							<td>19 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Планшет Z</td>
-							<td>1</td>
-							<td>1 000 руб.</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<tr>
-				<td>Мария Сидорова</td>
-				<td>05.03.2023</td>
-				<td>35 000 руб.</td>
-				<td>
-					<table class="nested-table">
-						<tr>
-							<th>Товар</th>
-							<th>Количество</th>
-							<th>Цена</th>
-						</tr>
-						<tr>
-							<td>Телефон X</td>
-							<td>2</td>
-							<td>14 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Наушники W</td>
-							<td>3</td>
-							<td>4 500 руб.</td>
-						</tr>
-						<tr>
-							<td>Смарт-часы Q</td>
-							<td>2</td>
-							<td>3 000 руб.</td>
-						</tr>
-						<tr>
-							<td>Планшет Z</td>
-							<td>1</td>
-							<td>13 500 руб.</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<style>
+	/* demo background */
+	body {
+		background: #200122;
+		background: -webkit-linear-gradient(to right, #6f0000, #200122);
+		background: linear-gradient(to right, #6f0000, #200122);
+	}
+
+	/* style snippet */
+	#thumbnail-preview-indicators {
+		position: relative;
+		overflow: hidden;
+	}
+
+	#thumbnail-preview-indicators .slides .slide-1,
+	#thumbnail-preview-indicators .slides .slide-2,
+	#thumbnail-preview-indicators .slides .slide-3 {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	#thumbnail-preview-indicators,
+	#thumbnail-preview-indicators .slides,
+	#thumbnail-preview-indicators .slides .slide-1,
+	#thumbnail-preview-indicators .slides .slide-2,
+	#thumbnail-preview-indicators .slides .slide-3 {
+		height: 480px;
+	}
+
+	#thumbnail-preview-indicators .slides .slide-1 {
+		background-image: url(https://cdn.tripster.ru/thumbs2/4e365f30-66c8-11ed-9a98-3a3e780b8ad6.1220x600.png);
+	}
+
+	#thumbnail-preview-indicators .slides .slide-2 {
+		background-image: url(https://cdn.tripster.ru/photos/3391fa1d-8c7a-42ec-bc98-e25115b108dd.jpg);
+	}
+
+	#thumbnail-preview-indicators .slides .slide-3 {
+		background-image: url(https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-7vtg-p-zastavki-na-rabochii-stol-priroda-more-gor-2.jpg);
+	}
+
+	#thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
+		top: 20%;
+		bottom: inherit;
+	}
+
+	#thumbnail-preview-indicators .carousel-indicators li,
+	#thumbnail-preview-indicators .carousel-indicators li.active {
+		position: relative;
+		width: 100px;
+		height: 8px;
+	}
+
+	#thumbnail-preview-indicators .carousel-indicators li>.thumbnail {
+		position: absolute;
+		top: 0;
+		width: 100px;
+		display: none;
+		opacity: 0;
+		left: 50%;
+		margin-top: -80px;
+		margin-left: -50px;
+	}
+
+	#thumbnail-preview-indicators .carousel-indicators li:hover>.thumbnail,
+	#thumbnail-preview-indicators .carousel-indicators li.active>.thumbnail {
+		display: block;
+		opacity: .8;
+	}
+
+	#thumbnail-preview-indicators .carousel-indicators li.active>.thumbnail:hover {
+		opacity: 1;
+	}
+
+	@media screen and (max-width : 480px) {
+
+		#thumbnail-preview-indicators .carousel-indicators li,
+		#thumbnail-preview-indicators .carousel-indicators li.active {
+			width: 50px;
+			height: 8px;
+			position: relative;
+		}
+
+		#thumbnail-preview-indicators .carousel-indicators li>.thumbnail {
+			width: 50px;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -25px;
+		}
+	}
+</style>
+
+<div id="thumbnail-preview-indicators" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#thumbnail-preview-indicators" data-slide-to="0" class="active">
+			<div class="thumbnail">
+				<img class="img-responsive" src="https://cdn.tripster.ru/thumbs2/4e365f30-66c8-11ed-9a98-3a3e780b8ad6.1220x600.png">
+ </div>
+		</li>
+		<li data-target="#thumbnail-preview-indicators" data-slide-to="1">
+			<div class="thumbnail">
+				<img class="img-responsive" src="https://cdn.tripster.ru/photos/3391fa1d-8c7a-42ec-bc98-e25115b108dd.jpg">
+ </div>
+		</li>
+		<li data-target="#thumbnail-preview-indicators" data-slide-to="2">
+			<div class="thumbnail">
+				<img class="img-responsive" src="https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-7vtg-p-zastavki-na-rabochii-stol-priroda-more-gor-2.jpg">
+ </div>
+		</li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item slides active">
+			<div class="slide-1"></div>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Слайдер</h1>
+					<p>Моря и Горы</p>
+				</div>
+			</div>
+		</div>
+		<div class="item slides">
+			<div class="slide-2"></div>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Слайдер 2</h1>
+					<p>Здесь может быть разнообразный текст</p>
+				</div>
+			</div>
+		</div>
+		<div class="item slides">
+			<div class="slide-3"></div>
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>Слайдер 3</h1>
+					<p>Здесь может быть разнообразный текст</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#thumbnail-preview-indicators" role="button"
+		data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#thumbnail-preview-indicators" role="button"
+		data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  <form action="index.html" target="_blank">
+   <button>Домой</button>
+  </form>
+    <form action="index3.html" target="_blank">
+   <button>Основная работа</button>
+  </form>
 </body>
-
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Круговая диаграмма</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-		}
-
-		canvas {
-			margin-top: 50px;
-		}
-
-		#tooltip {
-			position: absolute;
-			background-color: white;
-			border: 1px solid black;
-			padding: 10px;
-			display: none;
-		}
-	</style>
-</head>
-
-<body>
-	<h1>Количество сна и бодрствования</h1>
-
-	<!-- Canvas для диаграммы -->
-	<canvas id="chart" width="500" height="500"></canvas>
-
-	<!-- Контейнер для всплывающих данных -->
-	<div id="tooltip"></div>
-
-	<script>
-		// Получаем контекст canvas
-        const ctx = document.getElementById('chart').getContext('2d');
-        const tooltip = document.getElementById('tooltip');
-
-        // Данные для диаграммы
-        const data = [
-            { label: 'Сон', value: 8, color: '#191970' },
-            { label: 'Бодрствование', value: 16, color: '#fa7100' }
-        ];
-
-        // Функция для рисования круговой диаграммы
-        function drawChart(data) {
-            let total = data.reduce((acc, cur) => acc + cur.value, 0);
-            let startAngle = -Math.PI / 2;
-            let endAngle;
-            let xText, yText;
-            
-            for (let i = 0; i < data.length; i++) {
-                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
-                
-                ctx.beginPath();
-                ctx.moveTo(250, 250); // Центр круга
-                ctx.arc(250, 250, 175, startAngle, endAngle);
-                ctx.lineTo(250, 250);
-                ctx.fillStyle = data[i].color;
-                ctx.fill();
-
-                // Координаты для подписей
-                xText = 250 + Math.cos(startAngle + (endAngle - startAngle) / 2) * 210;
-                yText = 250 + Math.sin(startAngle + (endAngle - startAngle) / 2) * 210;
-
-                // Отображение подписей
-                ctx.font = '10x Arial';
-                ctx.textAlign = 'center';
-                ctx.fillStyle = '#000'; // Цвет текста
-                ctx.fillText(`${data[i].label}: ${(data[i].value / total * 100).toFixed(0)}%`, xText, yText);
-
-                startAngle = endAngle;
-            }
-        }
-
-        // Функция для обработки события mousemove
-        function onMouseMove(event) {
-            const rect = event.target.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-
-            // Проверяем, находится ли курсор внутри одного из сегментов
-            const angle = Math.atan2(y - 250, x - 250);
-            let currentSegment = null;
-
-            let startAngle = -Math.PI / 2;
-            let endAngle;
-            let total = data.reduce((acc, cur) => acc + cur.value, 0);
-
-            for (let i = 0; i < data.length; i++) {
-                endAngle = startAngle + ((data[i].value / total) * Math.PI * 2);
-
-                if (angle >= startAngle && angle < endAngle) {
-                    currentSegment = i;
-                    break;
-                }
-
-                startAngle = endAngle;
-            }
-
-            // Если найден сегмент, показываем всплывающее окно  //
-            if (currentSegment !== null) {
-                const segmentData = data[currentSegment];
-                const percent = (segmentData.value / total * 100).toFixed(0);
-
-                tooltip.style.display = 'block';
-                tooltip.innerHTML = `${segmentData.label}: ${percent}%`;
-                tooltip.style.left = `${event.pageX + 15}px`;
-                tooltip.style.top = `${event.pageY + 15}px`;
-            } else {
-                tooltip.style.display = 'none';
-            }
-        }
-
-        // Добавляем обработчик события mousemove
-        document.getElementById('chart').addEventListener('mousemove', onMouseMove);
-
-        // Вызываем функцию для рисования диаграммы
-        drawChart(data);
-	</script>
-	 <div class="container">
-   <a href="index3.html" class="button-style">-Продолжить-</a>
-  </div>
-</body>
-
 </html>
